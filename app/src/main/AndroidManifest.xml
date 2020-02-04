@@ -3,6 +3,8 @@
     package="com.example.miconductor">
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-feature android:name="android.hardware.location.gps" />
 
     <application
@@ -20,7 +22,7 @@
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyDxU6BvTLw6VVHnyiaDfSyc0hiv0v-n8B0" />
-
+        <service android:name=".ServicioLocalizacion"/>
         <uses-library
             android:name="org.apache.http.legacy"
             android:required="false" />
