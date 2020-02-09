@@ -144,4 +144,25 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
             }
         });
     }
+
+    public void mimensaje(View view) {
+       /* Button btnm=findViewById(R.id.btnenviar);
+        btnm.setVisibility(View.INVISIBLE);*/
+        JSONObject misdatos = new JSONObject();
+        try {
+            misdatos.put("id",App.getidcliente());
+        } catch (JSONException e) {
+            Log.e("JSONExceptionPresenter", e.toString());
+        }
+            mSocket.emit("enviarmensaje", misdatos, new Ack() {
+                @Override
+                public void call(Object... args) {
+                    String res = (String) args[0];
+                    if (res.equals("OK")) Log.i("mimensaje", "Se envio correctamente");
+                    else Log.i("mimensaje", "Hubo error en el envio");
+                }
+            });
+
+    }
+
 }
