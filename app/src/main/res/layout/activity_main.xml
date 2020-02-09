@@ -23,7 +23,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/btnenviar"
         android:text="enviar mensaje"
-        android:visibility="visible"
+        android:visibility="invisible"
         android:onClick="mimensaje"/>
     <Button
         android:layout_width="match_parent"

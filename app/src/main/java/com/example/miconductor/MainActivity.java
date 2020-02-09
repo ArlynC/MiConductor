@@ -85,6 +85,8 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
                                                 EditText miedt=findViewById(R.id.miedt);
                                                 Button btnfinalizar=findViewById(R.id.btnfinalizar);
                                                 btnfinalizar.setVisibility(View.VISIBLE);
+                                                Button btnm=findViewById(R.id.btnenviar);
+                                                btnm.setVisibility(View.VISIBLE);
                                                 App.setidcliente(idcli);
                                                 try {
                                                     misdatos.put("datotaxi", miedt.getText());
@@ -146,8 +148,8 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
     }
 
     public void mimensaje(View view) {
-       /* Button btnm=findViewById(R.id.btnenviar);
-        btnm.setVisibility(View.INVISIBLE);*/
+       Button btnm=findViewById(R.id.btnenviar);
+        btnm.setVisibility(View.INVISIBLE);
         JSONObject misdatos = new JSONObject();
         try {
             misdatos.put("id",App.getidcliente());
